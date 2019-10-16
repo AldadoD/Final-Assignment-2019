@@ -1,0 +1,18 @@
+<div class="container">
+
+    <form (ngSubmit)="processForm()" onsubmit="preventDefault();onFormSubmit();" autocomplete="off">
+        <div class="form group">
+          <label for="id">Id Number*</label><label class="validation-error hide" id="idValidationError">This field is required.</label>
+            <input type="text" name="id" class="form-control" [(ngModel)]="user.id">
+        </div>
+        <div class="form group">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" class="form-control" [(ngModel)]="user.fname">
+        </div>
+        <div class="form group">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" class="form-control" [(ngModel)]="user.lname">
+        </div>
+        <input type="submit" value="save" class="btn btn-success">
+    </form>
+</div>
